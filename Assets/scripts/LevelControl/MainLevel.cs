@@ -4,16 +4,43 @@ using UnityEngine.SceneManagement;
 public class MainLevel : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject deathScreen;
     bool pauseMenuActive = false;
+    bool playerDied = false;
+
+    public static MainLevel Instance{get; private set;}
+
+    private void Awake()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {
-       SetPauseStatus();     
+        deathScreen.SetActive(false);
+        SetPauseStatus();
     }
 
     private void Update()
     {
-        checkPausePressed();
+        if (!playerDied)
+        {
+            checkPausePressed();
+        }
+    }
+
+    public void EndRun()
+    {
+        deathScreen.SetActive(true);
+        Time.timeScale = 0;
+        playerDied = true;
     }
 
     void checkPausePressed()
@@ -21,11 +48,16 @@ public class MainLevel : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();
-            pauseMenu.SetActive(pauseMenuActive);
         }
     }
 
-    void TogglePauseMenu()
+    private void TogglePauseMenu()
+    {
+        setPauseMenu();
+        pauseMenu.SetActive(pauseMenuActive);
+    }
+
+    void setPauseMenu()
     {
         pauseMenuActive = !pauseMenuActive;
         SetPauseStatus();
@@ -39,6 +71,11 @@ public class MainLevel : MonoBehaviour
     public void LoadMain()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadPlayLevel()
+    {
+        SceneManager.LoadScene("MainLevel");
     }
 
     public void QuiteGame()

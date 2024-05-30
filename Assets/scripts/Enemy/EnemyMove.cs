@@ -13,10 +13,9 @@ public class EnemyMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         int randomInt = Random.Range(2, 9);
         random = randomInt / 10f;
-        PlayerSingleton playerSingleton = PlayerSingleton.Instance;
         try
         {
-            playerTransform = playerSingleton.getTransform();
+            playerTransform = PlayerSingleton.Instance.getTransform();
         }
         catch (System.Exception)
         {
@@ -30,6 +29,10 @@ public class EnemyMove : MonoBehaviour
 
     void followPlayer()
     {
+        if(playerTransform == null)
+        {
+            playerTransform = PlayerSingleton.Instance.transform;
+        }
         Vector3 moveDir = playerTransform.position - transform.position;
         moveDir = Vector3.Normalize(moveDir);
 

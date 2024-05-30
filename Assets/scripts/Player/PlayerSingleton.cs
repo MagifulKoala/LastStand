@@ -1,8 +1,11 @@
+using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 public class PlayerSingleton : MonoBehaviour
 {
     public static PlayerSingleton Instance{get; private set;}
+    public Transform playerTransform;
+    public float playerScore;
 
     private void Awake()
     {
@@ -18,10 +21,21 @@ public class PlayerSingleton : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        playerScore = 0;    
+    }
+
     public Transform getTransform()
     {
         //Debug.Log("getting transform");
-        return transform;
+        return playerTransform;
+    }
+
+    public void UpdateScore(float pNewScore)
+    {
+        playerScore += pNewScore;
+        UIControl.Instance.UpdateScore(playerScore);
     }
 
 }

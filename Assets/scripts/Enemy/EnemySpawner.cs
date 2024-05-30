@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -6,6 +7,9 @@ public class EnemySpawner : MonoBehaviour
     SimpleTimer timer;
     public float spawnTime;
     public int simultaneosEnemySpawns;
+    public float radius = 0.5f;
+    public LayerMask layerMask;
+
     bool timerFinished = false;
 
     private void Start()
@@ -50,11 +54,52 @@ public class EnemySpawner : MonoBehaviour
 
     private void spawnEnemy(Vector3 bottomLeft, Vector3 upperRight)
     {
+        Vector3? spawnPoint = CreateSpawnPoint(bottomLeft, upperRight);
+        Debug.Log($"spanwPoint: {spawnPoint}");
+        if (spawnPoint != null)
+        {
+            Instantiate(enemyPrefab, spawnPoint.Value, Quaternion.identity);
+        }
+    }
+
+    int numberOfTries = 0;
+    private Vector3? CreateSpawnPoint(Vector3 bottomLeft, Vector3 upperRight)
+    {
+        if (numberOfTries >= 3) { numberOfTries = 0; return null; }
+
         float xPos = Random.Range(bottomLeft.x, upperRight.x);
         float yPos = Random.Range(bottomLeft.y, upperRight.y);
-
         Vector3 spawnPoint = new Vector3(xPos, yPos, transform.position.z);
 
-        Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
+        if (CheckForPlayer(spawnPoint))
+        {
+            Debug.Log("player detected changing spawn");
+            numberOfTries++;
+            Debug.Log($"numberOfTries: {numberOfTries}");
+            return CreateSpawnPoint(bottomLeft, upperRight);
+        }
+        else
+        {
+            numberOfTries = 0;
+            return spawnPoint;
+        }
+
+    }
+
+    private bool CheckForPlayer(Vector3 spawnPoint)
+    {
+        Vector2 point = new Vector2(spawnPoint.x, spawnPoint.y);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(point, radius, layerMask);
+        if (colliders.Length > 0)
+        {
+            foreach (Collider2D col in colliders)
+            {
+                if (col.gameObject.tag == "Player")
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
