@@ -16,10 +16,11 @@ public class StatsControl : MonoBehaviour
 
     public void ReceieveDamage(float pIncomingDamage)
     {
+        Debug.Log($"damage recieved: {pIncomingDamage}");
         currentHealth -= pIncomingDamage;
         if (this.gameObject.tag == "Player")
         {
-            UIControl.Instance.UpdateHealthBar((float)currentHealth/(float)totalHealth, totalHealth);
+            UIControl.Instance.UpdateHealthBar((float)currentHealth, totalHealth);
         }
         if (currentHealth <= 0)
         {
@@ -28,7 +29,7 @@ public class StatsControl : MonoBehaviour
             {
                 playerDied?.Invoke();
             }
-            Destroy(this.gameObject, 0.3f);
+            Destroy(this.gameObject, 0.1f);
         }
     }
 

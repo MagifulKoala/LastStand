@@ -5,14 +5,19 @@ public class MainLevel : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject deathScreen;
+    public EnemySpawner enemySpawner;
+    public float difficultyIncreaseTime;
+    public int timeReduce;
     bool pauseMenuActive = false;
     bool playerDied = false;
+    bool timerReady = true;
+    SimpleTimer timer;
 
-    public static MainLevel Instance{get; private set;}
+    public static MainLevel Instance { get; private set; }
 
     private void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this);
         }
@@ -24,6 +29,8 @@ public class MainLevel : MonoBehaviour
 
     private void Start()
     {
+        timer = GetComponent<SimpleTimer>();
+        timer.timerFinished.AddListener(IncreaseDifficulty);
         deathScreen.SetActive(false);
         SetPauseStatus();
     }
@@ -34,6 +41,11 @@ public class MainLevel : MonoBehaviour
         {
             checkPausePressed();
         }
+/*         if (false)
+        {
+            timer.StartTimer(difficultyIncreaseTime);
+            timerReady = false;
+        } */
     }
 
     public void EndRun()
@@ -81,6 +93,15 @@ public class MainLevel : MonoBehaviour
     public void QuiteGame()
     {
         Application.Quit();
+    }
+
+    void IncreaseDifficulty()
+    {
+        if (enemySpawner.spawnTime > 4)
+        {
+            enemySpawner.spawnTime -= timeReduce;
+        }
+        timerReady = true;
     }
 
 

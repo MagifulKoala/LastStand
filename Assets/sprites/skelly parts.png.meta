@@ -1,0 +1,336 @@
+fileFormatVersion: 2
+guid: 5f983a9b4774e754689133e1360e637d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 220
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skelly parts_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 572
+        width: 540
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 256.21826, y: -105.875}
+        - {x: 256.21826, y: -104.48291}
+        - {x: 264.57043, y: -104.48291}
+        - {x: 264.57043, y: -105.875}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0839bf28e12db5b4cb579c6368a1651c
+      internalID: 1729115124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skelly parts_1
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 719
+        width: 193
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284d364129d01074e97f24f5e6a0265b
+      internalID: 755971600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skelly parts_2
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 707
+        width: 207
+        height: 337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4f71467e264be49a4f75086652041c
+      internalID: -242429162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skelly parts_3
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 735
+        width: 378
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4292a93bf1582714c958768f56311a25
+      internalID: 13660626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skelly parts_12
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 97
+        width: 481
+        height: 536
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d23479400a48ff4b9e2db5c16b40120
+      internalID: -490051451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skelly parts_14
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 86
+        width: 303
+        height: 568
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5caccefcf8c0045bf242ec8f7cd004
+      internalID: 806312975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skelly parts_16
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 96
+        width: 212
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c6e4f8393a4d24ab0f088f6ddcd85f
+      internalID: 549067638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      skelly parts_0: 1729115124
+      skelly parts_1: 755971600
+      skelly parts_10: 1638500367
+      skelly parts_11: -2086245986
+      skelly parts_12: -490051451
+      skelly parts_13: -1271457355
+      skelly parts_14: 806312975
+      skelly parts_15: -2075731764
+      skelly parts_16: 549067638
+      skelly parts_17: 1775284386
+      skelly parts_18: 1486064064
+      skelly parts_19: -635094129
+      skelly parts_2: -242429162
+      skelly parts_20: 1250888260
+      skelly parts_21: 1368036177
+      skelly parts_22: 1404490428
+      skelly parts_23: 56329234
+      skelly parts_24: 1446461673
+      skelly parts_25: 1559611046
+      skelly parts_26: -599300908
+      skelly parts_27: -414908079
+      skelly parts_28: -1543935165
+      skelly parts_29: -1325476284
+      skelly parts_3: 13660626
+      skelly parts_30: -1005548529
+      skelly parts_31: -293836534
+      skelly parts_32: 1717187299
+      skelly parts_33: 1174158259
+      skelly parts_34: 824009017
+      skelly parts_35: 1205394783
+      skelly parts_36: -867867965
+      skelly parts_37: 1612522946
+      skelly parts_38: 1564803800
+      skelly parts_39: 7726291
+      skelly parts_4: -1455532320
+      skelly parts_40: -130093161
+      skelly parts_41: 918595726
+      skelly parts_42: -1019588101
+      skelly parts_43: 580844218
+      skelly parts_44: -2003456470
+      skelly parts_5: -632593583
+      skelly parts_6: 381249010
+      skelly parts_7: 1758809495
+      skelly parts_8: 93734156
+      skelly parts_9: -1186533021
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

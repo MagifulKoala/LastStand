@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -55,7 +54,7 @@ public class EnemySpawner : MonoBehaviour
     private void spawnEnemy(Vector3 bottomLeft, Vector3 upperRight)
     {
         Vector3? spawnPoint = CreateSpawnPoint(bottomLeft, upperRight);
-        Debug.Log($"spanwPoint: {spawnPoint}");
+        //Debug.Log($"spanwPoint: {spawnPoint}");
         if (spawnPoint != null)
         {
             Instantiate(enemyPrefab, spawnPoint.Value, Quaternion.identity);

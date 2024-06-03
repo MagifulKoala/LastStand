@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,7 +39,7 @@ public class UIControl : MonoBehaviour
 
     public void UpdateHealthBar(float pNewHealth, float pMaxHealth)
     {
-        healthBar.value = pNewHealth;
+        healthBar.value = (float)(pNewHealth)/(float)(pMaxHealth);
         healthText.text = $"{pNewHealth}/{pMaxHealth}";
     }
 

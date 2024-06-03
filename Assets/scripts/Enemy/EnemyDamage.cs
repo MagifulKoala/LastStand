@@ -8,19 +8,25 @@ public class EnemyDamage : MonoBehaviour
     {
         int contactCount = other.GetContacts(other.contacts);
 
-        for(int i = 0; i < contactCount; i++)
+        for (int i = 0; i < contactCount; i++)
         {
             ContactPoint2D contact = other.contacts[i];
             GameObject contactObj = contact.collider.gameObject;
             Debug.Log("Collided with child: " + contactObj.name + " " + contactObj.tag);
-            if(contactObj.tag == "Player")
+            if (contactObj.tag == "weapon")
             {
-                Debug.Log("hit player");
-                StatsControl otherObjectStats = contactObj.GetComponent<StatsControl>();
-                otherObjectStats.ReceieveDamage(attackDamage);
+                Debug.Log("contact with weapon");
+                return;
             }
         }
-   
+
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("hit player");
+            StatsControl otherObjectStats = other.gameObject.GetComponent<StatsControl>();
+            otherObjectStats.ReceieveDamage(attackDamage);
+        }
+
     }
 
 }
